@@ -399,9 +399,7 @@ figure {
 }
 .hero-image {
   object-fit: cover;
-  object-position: 58% 62%;
-  transform: scale(1.45);
-  transform-origin: 58% 45%;
+  object-position: center 72%;
 }
 .hero-scrim {
   position: absolute;
@@ -454,11 +452,6 @@ figure {
 @media (max-width: 560px) {
   .hero {
     height: clamp(520px, 84svh, 680px);
-  }
-  .hero-image {
-    object-position: 66% center;
-    transform: scale(1.15) translateY(-14%);
-    transform-origin: 66% center;
   }
   .hero-content {
     bottom: var(--space-6);
