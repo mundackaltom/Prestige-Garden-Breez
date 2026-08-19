@@ -4,8 +4,8 @@ export default function Hero() {
   return (
     <section className="hero">
       <Image
-        src="/assets/hero-bedroom.png"
-        alt="Prestige Garden Breez — bedroom with red-panel accent wall"
+        src="/assets/video-thumbnail-entrance-sign.jpeg"
+        alt="The Prestige City entrance signage"
         fill
         sizes="100vw"
         className="hero-image"
