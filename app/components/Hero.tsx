@@ -1,0 +1,37 @@
+import Image from "next/image";
+
+export default function Hero() {
+  return (
+    <div className="container">
+      <section className="hero">
+        <span className="tag tag-accent" style={{ marginBottom: "var(--space-4)" }}>
+          Prestige Garden Breez
+        </span>
+        <h1 className="hero-title">Prestige Garden Breez</h1>
+        <p className="hero-body">
+          Your final opportunity to own a premium home at Prestige Garden Breez, Sarjapur Road —
+          Phase 7 of Prestige Group&apos;s 180-acre township, The Prestige City, in East Bangalore.
+        </p>
+        <div className="hero-actions">
+          <a href="#contact" className="btn btn-primary">
+            Enquire Now
+          </a>
+          <a href="#floorplans" className="btn btn-ghost">
+            View Floor Plans
+          </a>
+        </div>
+      </section>
+
+      <figure className="hero-figure">
+        <Image
+          src="/assets/hero-bedroom.png"
+          alt="Prestige Garden Breez — bedroom with red-panel accent wall"
+          fill
+          sizes="(max-width: 1200px) 100vw, 1200px"
+          style={{ objectFit: "cover" }}
+          priority
+        />
+      </figure>
+    </div>
+  );
+}
