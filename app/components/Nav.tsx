@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 const LINKS = [
   { href: "#about", label: "Overview" },
   { href: "#amenities", label: "Highlights" },
@@ -8,11 +12,14 @@ const LINKS = [
 ];
 
 export default function Nav() {
+  const [open, setOpen] = useState(false);
+
   return (
     <>
       <nav className="nav">
         <span className="nav-brand">Prestige Garden Breez</span>
-        <div className="nav-links">
+
+        <div className="nav-links nav-links-desktop">
           {LINKS.map((link) => (
             <a key={link.href} href={link.href}>
               {link.label}
@@ -22,7 +29,33 @@ export default function Nav() {
             Enquire Now
           </a>
         </div>
+
+        <button
+          type="button"
+          className="nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded={open}
+          onClick={() => setOpen((o) => !o)}
+        >
+          <span className="nav-toggle-bar" />
+          <span className="nav-toggle-bar" />
+          <span className="nav-toggle-bar" />
+        </button>
       </nav>
+
+      {open && (
+        <div className="nav-dropdown">
+          {LINKS.map((link) => (
+            <a key={link.href} href={link.href} onClick={() => setOpen(false)}>
+              {link.label}
+            </a>
+          ))}
+          <a href="#contact" className="btn btn-primary nav-dropdown-cta" onClick={() => setOpen(false)}>
+            Enquire Now
+          </a>
+        </div>
+      )}
+
       <div className="nav-spacer" />
     </>
   );

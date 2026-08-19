@@ -10,30 +10,32 @@ export default function FloorPlans() {
     <div className="container">
       <section id="floorplans" style={{ padding: "var(--space-8) 0" }}>
         <span className="kicker">Floor Plans &amp; Unit Types</span>
-        <table className="table">
-          <thead>
-            <tr>
-              <th>Configuration</th>
-              <th>Saleable Area</th>
-              <th>Starting Price</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            {UNITS.map((unit) => (
-              <tr key={unit.config}>
-                <td>{unit.config}</td>
-                <td>{unit.area}</td>
-                <td>{unit.price}</td>
-                <td>
-                  <a href="#contact" className="btn btn-secondary">
-                    Enquire
-                  </a>
-                </td>
+        <div className="table-scroll">
+          <table className="table">
+            <thead>
+              <tr>
+                <th>Configuration</th>
+                <th>Saleable Area</th>
+                <th>Starting Price</th>
+                <th></th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {UNITS.map((unit) => (
+                <tr key={unit.config}>
+                  <td>{unit.config}</td>
+                  <td>{unit.area}</td>
+                  <td>{unit.price}</td>
+                  <td>
+                    <a href="#contact" className="btn btn-secondary">
+                      Enquire
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
         <p className="table-footnote">
           *Tentative pricing shared at the Prestige Partner Circle Meet — subject to change. 655
           homes across 4 towers.
