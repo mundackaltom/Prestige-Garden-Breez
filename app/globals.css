@@ -392,21 +392,47 @@ figure {
 
 /* — hero — */
 .hero {
-  padding: calc(3 * var(--space-6)) 0 var(--space-8);
+  position: relative;
+  width: 100%;
+  height: clamp(560px, 82vh, 760px);
+  overflow: hidden;
+}
+.hero-image {
+  object-fit: cover;
+}
+.hero-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15, 12, 10, 0.88) 0%,
+    rgba(15, 12, 10, 0.55) 42%,
+    rgba(15, 12, 10, 0.1) 72%,
+    rgba(15, 12, 10, 0) 100%
+  );
+}
+.hero-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: var(--space-8);
+}
+.hero-tag {
+  margin-bottom: var(--space-4);
 }
 .hero-title {
   font-size: clamp(38px, 6vw, 72px);
   line-height: 1.05;
   letter-spacing: -0.02em;
   margin: var(--space-4) 0 0;
-  color: var(--color-neutral-900);
+  color: var(--color-bg);
 }
 .hero-body {
   font-size: 18px;
   line-height: 1.6;
   max-width: 62ch;
   margin: var(--space-4) 0 0;
-  color: var(--color-neutral-800);
+  color: color-mix(in srgb, var(--color-bg) 88%, transparent);
 }
 .hero-actions {
   display: flex;
@@ -414,11 +440,18 @@ figure {
   flex-wrap: wrap;
   margin-top: var(--space-6);
 }
-.hero-figure {
-  margin: 0 0 var(--space-8);
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
+.hero .btn-ghost {
+  color: var(--color-bg);
+  border-color: color-mix(in srgb, var(--color-bg) 60%, transparent);
+}
+.hero .btn-ghost:hover {
+  background: color-mix(in srgb, var(--color-bg) 12%, transparent);
+}
+
+@media (max-width: 560px) {
+  .hero {
+    height: clamp(520px, 92vh, 640px);
+  }
 }
 
 /* — stats — */
