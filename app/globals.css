@@ -451,7 +451,7 @@ figure {
 
 @media (max-width: 560px) {
   .hero {
-    height: clamp(440px, 68svh, 560px);
+    height: clamp(520px, 84svh, 680px);
   }
   .hero-content {
     bottom: var(--space-6);
