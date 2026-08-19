@@ -18,17 +18,6 @@ export default function Nav() {
   return (
     <>
       <div className="site-header">
-        <div className="partner-strip">
-          <Image
-            src="/assets/prestige-authorised-sales-partner.jpg"
-            alt="Prestige Group — Authorised Sales Partner"
-            width={1280}
-            height={323}
-            className="partner-badge"
-            priority
-          />
-        </div>
-
         <nav className="nav">
           <span className="nav-brand">Prestige Garden Breez</span>
 
@@ -55,6 +44,17 @@ export default function Nav() {
             <span className="nav-toggle-bar" />
           </button>
         </nav>
+
+        <div className="partner-strip">
+          <Image
+            src="/assets/prestige-authorised-sales-partner.jpg"
+            alt="Prestige Group — Authorised Sales Partner"
+            width={1280}
+            height={323}
+            className="partner-badge"
+            priority
+          />
+        </div>
 
         {open && (
           <div className="nav-dropdown">
