@@ -399,6 +399,7 @@ figure {
 }
 .hero-image {
   object-fit: cover;
+  object-position: center 72%;
 }
 .hero-scrim {
   position: absolute;
@@ -450,7 +451,24 @@ figure {
 
 @media (max-width: 560px) {
   .hero {
-    height: clamp(520px, 92vh, 640px);
+    height: clamp(440px, 68svh, 560px);
+  }
+  .hero-content {
+    bottom: var(--space-6);
+  }
+  .hero-tag {
+    margin-bottom: var(--space-3);
+  }
+  .hero-title {
+    font-size: clamp(32px, 9vw, 44px);
+    margin-top: var(--space-3);
+  }
+  .hero-body {
+    font-size: 15.5px;
+    margin-top: var(--space-3);
+  }
+  .hero-actions {
+    margin-top: var(--space-4);
   }
 }
 
