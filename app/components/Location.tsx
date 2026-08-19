@@ -4,9 +4,7 @@ export default function Location() {
       <section id="location" className="location-grid" style={{ padding: "var(--space-8) 0" }}>
         <div>
           <span className="kicker">Location</span>
-          <h2 style={{ fontSize: 30, color: "var(--color-neutral-900)" }}>
-            Yamare Village, Sarjapur Road
-          </h2>
+          <h2 style={{ fontSize: 30, color: "var(--color-neutral-900)" }}>Sarjapur Road</h2>
           <p className="location-body">
             Prestige Garden Breez is on Sarjapur–Marathahalli Road (SH-35), East Bangalore —
             within reach of Whitefield, Marathahalli, the ORR tech corridor and the Sarjapur
