@@ -1,3 +1,5 @@
+export const SITE_URL = "https://prestigegardenbreez.homes";
+
 export const SHOW_PRICING_SECTION = true;
 
 export const FORM_SUCCESS_MESSAGE = "Thanks — our team will call you shortly.";
